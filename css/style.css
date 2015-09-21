@@ -13,7 +13,29 @@ body{
     }
 }
 
+@media (max-width: 420px){
+    IMG.profile{
+      width: 40%;
+    }
+}
 
+@media (min-width: 420px){
+    IMG.profile{
+      width: 30%;
+    }
+}
+
+@media (min-width: 530px){
+    IMG.profile{
+      width: 23%;
+    }
+}
+
+@media (min-width: 688px){
+    IMG.profile{
+      width: 15%;
+    }
+}
 .content{
   height: 100%;
   width: 100%;
@@ -29,7 +51,6 @@ IMG.profile{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 15%;
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
 
