@@ -13,6 +13,7 @@ body{
     }
 }
 
+
 .content{
   height: 100%;
   width: 100%;
@@ -49,12 +50,13 @@ IMG.profile{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 5em;
     padding-bottom: 2%;
     font-family: 'Alegreya Sans';
     font-weight: 100;
+    font-size: 4em;
     padding-left: 10%;
     padding-right: 10%;
+    -ms-text-size-adjust:
 
 }
 ul{
