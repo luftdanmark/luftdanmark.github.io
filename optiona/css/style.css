@@ -1,0 +1,56 @@
+.enterinfo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+body{
+  padding-top: 3%;
+}
+
+input{
+  text-align: center;
+}
+
+.confirminfo{
+  text-align: center;
+}
+.formtext{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 300;
+}
+
+IMG.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  padding-bottom: 1%;
+
+}
+
+.nameopt{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Alegreya Sans';
+    font-weight: 100;
+    margin-bottom: -1px;
+    font-size: 4em;
+    padding-left: 10%;
+    padding-right: 10%;
+    -ms-text-size-adjust:
+}
+
+.thankyou{
+  display: inline;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+  padding-top: 3%;
+
+}
