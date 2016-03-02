@@ -17,8 +17,6 @@
 
             var link = el.href;
 
-            /* Only if it is an external link */
-            if (link.indexOf(location.host) == -1 && !link.match(/^javascript\:/i)) {
                 /* Is target set and not _(self|parent|top)? */
                 var target = (el.target && !el.target.match(/^_(self|parent|top)$/i)) ? el.target : false;
 
@@ -53,7 +51,6 @@
                     /* Prevent standard click */
                     event.preventDefault ? event.preventDefault() : event.returnValue = !1;
                 }
-            }
 
         }
     }
