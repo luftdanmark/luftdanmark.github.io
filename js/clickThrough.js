@@ -33,13 +33,13 @@
                 /* If target opens a new window then just track */
                 if (el.target && !el.target.match(/^_(self|parent|top)$/i)) {
                     ga(
-                        "send", "event", "Outgoing Links", link,
+                        "send", "event", "Outgoing Links", el.textContent,
                         document.location.pathname + document.location.search
                     );
                 } else {
                     /* send event with callback */
                     ga(
-                        "send", "event", "Outgoing Links", link,
+                        "send", "event", "Outgoing Links", el.textContent,
                         document.location.pathname + document.location.search, {
                             "hitCallback": hitBack
                         }
