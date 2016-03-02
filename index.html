@@ -16,30 +16,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-70108833-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-    
-    <script>
-    /**
-    * Function that tracks a click on an outbound link in Analytics
-    * This function takes a valid URL string as an argument, and uses that URL string
-    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-    * using 'navigator.sendBeacon' in browser that support it.
-    */
-    var trackOutboundLink = function(url) {
-       ga('send', 'event', 'outbound', 'click', url, {
-         'transport': 'beacon',
-         'hitCallback': function(){document.location = url;}
-       });
-    }
-    </script>
     
   </head>
   <body>
@@ -89,13 +66,13 @@
         <div class="respbox box col-md-3 col-xs-12 col-sm-6">
           <h2 class="boxLabel">Work</h2>
           <p>
-            <a href="files/CarlPhilipMajgaardResume.pdf" onclick="trackOutboundLink('http://www.cpmajgaard.com/files/CarlPhilipMajgaardResume.pdf'); return false;">Resume</a>
+            <a href="files/CarlPhilipMajgaardResume.pdf">Resume</a>
           </p>
           <p>
-            <a href="http://www.linkedin.com/in/cpmajgaard" onclick="trackOutboundLink('http://www.linkedin.com/in/cpmajgaard'); return false;">LinkedIn</a>
+            <a href="http://www.linkedin.com/in/cpmajgaard">LinkedIn</a>
           </p>
           <p>
-            <a href="https://github.com/luftdanmark" onclick="trackOutboundLink('http://www.github.com/luftdanmark'); return false;">GitHub</a>
+            <a href="https://github.com/luftdanmark">GitHub</a>
           </p>
         </div>
 
@@ -114,5 +91,17 @@
       </div>
 
     </div>
-  </body>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-70108833-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="js/clickThrough.js"></script>
+    
+  </body> 
 </html>
