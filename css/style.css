@@ -8,6 +8,8 @@ body{
     padding-top: 4%;
   /*  background-color: #f9f9f9; */
 }
+
+
 @media (min-width: 768px) and (max-width: 992px){
     .box{
         height:20em;
@@ -39,8 +41,11 @@ body{
 }
 
 @media screen and (min-width: 48em) and (max-width: 61.95em){
-    .respbox{
+    .lbox{
         text-align: right;
+    }
+    .rbox{
+      text-align: left;
     }
 }
 
@@ -49,11 +54,6 @@ body{
   width: 100%;
 }
 
-.box{
-  font-weight: 300;
-  font-size: 1.2em;
-
-}
 
 .minilabel{
   font-style: oblique;
@@ -70,10 +70,8 @@ IMG.profile{
 }
 
 .boxes{
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-top: -2%;
-    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
 
 }
 
@@ -117,4 +115,20 @@ li{
   border-style: solid;
   border-width: 1px;
   background-color: rgba(50,50,50,0.2);
+}
+
+.box{
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.2em;
+
+}
+
+#proficient {
+  width: 50%;
+  float: left;
+}
+#workedin {
+  width: 50%;
+  float: left;
 }
