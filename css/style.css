@@ -10,7 +10,7 @@ body{
 }
 
 
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 768px) and (max-width: 1080px){
     .box{
         height:20em;
     }
@@ -78,6 +78,7 @@ IMG.profile{
 .skillbox{
   padding-left: 0;
   margin-left: 0;
+  text-align: center;
 }
 .boxLabel{
    font-family: 'Alegreya Sans', sans-serif;
@@ -100,7 +101,8 @@ IMG.profile{
 ul{
     list-style:none;
     margin-top:-5px;
-    padding-left:10px;
+    text-align: center;
+    padding-left: 0;
 }
 li{
     /* font-style:italic; */
