@@ -127,6 +127,11 @@ li{
 
 }
 
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
 #proficient {
   width: 50%;
   float: left;
