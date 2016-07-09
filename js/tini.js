@@ -21,7 +21,7 @@ $(document).ready(function(){
   //chat
   Smooch.on('ready', function(){
 
-      var ip = userip
+      var ip = "?"
       var city = "?"
       var region = "?"
       var country = "?"
@@ -29,23 +29,24 @@ $(document).ready(function(){
           //console.log(data)
           //$("#chat").text("Are you from "+data["city"]+", "+data["region"]+", "+data["country"]+"?");
 
-          city = data["city"]
-          region = data["region"]
-          country = data["country"]
+          ip = data["ip"];
+          city = data["city"];
+          region = data["region"];
+          country = data["country"];
 
-      }).error(function() { swal("Hey You!", "Why don't you disable ad block on mysite.")});
+          Smooch.updateUser({
+              givenName: city+', '+country,
+              surname: ip,
+          });
 
-      Smooch.updateUser({
-          givenName: city+', '+country,
-          surname: userip,
-      });
+      }).error(function() { swal("Hey You!", "How about disabling adBlock?")});
   });
 
   Smooch.init({
       appToken: 'bsr6mwgtbgnby9ubqdu71ko9c',
       customText: {
           headerText: 'Say Hi',
-          inputPlaceholder: "",
+          introductionText: 'Let me know if I can help with anything!',
           sendButtonText: 'Send',
           introText: "What's up?",
           settingsText: "Feel free to leave your email, and I'll get back to you."
