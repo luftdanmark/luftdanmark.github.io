@@ -96,34 +96,16 @@ $(document).ready(function(){
       var cmd = lines[0];
 
       if (cmd == "/help") {
-          Smooch.sendMessage("Options:" +
-              "\n/help\n/resume\n/email\n/github\n/linkedin\n/location");
+          Smooch.track("/help");
       } else if (cmd == "/email") {
-          Smooch.sendMessage("=> bahmdev@gmail.com");
+          Smooch.track("/email");
       } else if (cmd == "/resume") {
           window.open("files/CarlPhilipMajgaardResume.pdf");
       } else if (cmd == "/github") {
           window.location.href = "https://github.com/luftdanmark";
       } else if (cmd == "/linkedin") {
           window.location.href = "https://www.linkedin.com/in/cpmajgaard";
-      } else if (cmd == "/location") {
-          function showPosition(position) {
-              var km = getDistanceFromLatLonInKm(position.coords.latitude, position.coords.longitude,
-                                                                                              44.563384, -69.664498);
-              var mi = Math.round(km * 0.621 * 100) / 100;
-              km = Math.round(km * 100) / 100;
-
-              var link = "http://maps.google.com/maps?q="+position.coords.latitude+ ","+position.coords.longitude;
-              Smooch.sendMessage("We're "+km+"km / "+mi+"mi from eachother.\n"+link);
-
-          }
-          if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(showPosition);
-          } else {
-              Smooch.sendMessage("Try turning on your location...");
-          }
-
-      } else if (cmd.charAt(0) == "/"){
+      }  else if (cmd.charAt(0) == "/"){
           Smooch.sendMessage("Invalid Command, type /help for info.");
       }
   });
