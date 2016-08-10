@@ -44,12 +44,14 @@ $(document).ready(function(){
 
   Smooch.init({
       appToken: 'bsr6mwgtbgnby9ubqdu71ko9c',
+      emailCaptureEnabled: true,
       customText: {
           headerText: 'Say Hi',
           introductionText: 'Let me know if I can help with anything!',
           sendButtonText: 'Send',
           introText: "What's up?",
-          settingsText: "Feel free to leave your email, and I'll get back to you."
+          settingsText: "Feel free to leave your email, and I'll get back to you.",
+          settingsNotificationText: 'In case I\'m slow to respondyou can <a href data-ui-settings-link>leave me your email</a>.'
       }
   });
 
@@ -96,7 +98,8 @@ $(document).ready(function(){
       var cmd = lines[0];
 
       if (cmd == "/help") {
-          Smooch.track("/help");
+          Smooch.sendMessage("Options:" +
+              "\n/resume\n/email\n/github\n/linkedin\n/help");
       } else if (cmd == "/email") {
           Smooch.track("/email");
       } else if (cmd == "/resume") {
