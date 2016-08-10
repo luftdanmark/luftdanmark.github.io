@@ -51,7 +51,7 @@ $(document).ready(function(){
           sendButtonText: 'Send',
           introText: "What's up?",
           settingsText: "Feel free to leave your email, and I'll get back to you.",
-          settingsNotificationText: 'In case I\'m slow to respondyou can <a href data-ui-settings-link>leave me your email</a>.'
+          settingsNotificationText: 'In case I\'m slow to respond you can <a href data-ui-settings-link>leave me your email</a>.'
       }
   });
 
