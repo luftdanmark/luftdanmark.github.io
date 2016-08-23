@@ -38,7 +38,7 @@ $(document).ready(function(){
               givenName: city+', '+country,
               surname: ip,
               properties: {
-              'lastOpen' : new Date().toLocaleString()
+              'lastOpen' : new Date().toUTCString()
               }
           });
         
