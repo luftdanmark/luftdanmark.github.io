@@ -93,9 +93,7 @@ $(document).ready(function(){
         } else if (cmd == "video"){
             Smooch.open();
             window.location.assign("https://appear.in/cpmajgaard");
-        } else {
-	    Smooch.open();
-	}
+        }
     }
 
   });
