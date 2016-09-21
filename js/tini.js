@@ -126,7 +126,7 @@ $(document).ready(function(){
       } else if (cmd == "/email") {
           swal({
                     title: "Email Me!",
-                    text: "You can reach me at cmajgaaard@gmail.com",
+                    text: "You can reach me at cmajgaard@gmail.com",
                     allowEscapeKey: "false",
                     showCancelButton: true,
                     cancelButtonText: "Not right now",
