@@ -25,7 +25,7 @@ $(document).ready(function(){
       var city = "?"
       var region = "?"
       var country = "?"
-      $.getJSON('http://ipinfo.io', function(data){
+      $.getJSON('https://ipinfo.io', function(data){
           //console.log(data)
           //$("#chat").text("Are you from "+data["city"]+", "+data["region"]+", "+data["country"]+"?");
 
@@ -41,7 +41,7 @@ $(document).ready(function(){
               'lastOpen' : new Date().toUTCString()
               }
           });
-        
+
           Smooch.getConversation().then(function(conversation){})
                                   .catch(function(){
                                        Smooch.sendMessage("Hey! What a cool website!");
@@ -50,9 +50,9 @@ $(document).ready(function(){
       }).error(function() { swal("Hey You!", "How about disabling adBlock?")});
   });
 
-  
+
   Smooch.on('message:received', function(message) {
-    
+
     if (message.lastInGroup && ((Date.now()/1000) - 15) >= message.received){
       Smooch.updateUser({
           properties: {
@@ -99,7 +99,7 @@ $(document).ready(function(){
     }
 
   });
-  
+
   Smooch.init({
       appToken: 'bsr6mwgtbgnby9ubqdu71ko9c',
       emailCaptureEnabled: true,
@@ -121,7 +121,7 @@ $(document).ready(function(){
       var cmd = lines[0];
 
       if (cmd == "/help") {
-          swal("Options:", 
+          swal("Options:",
               "/resume\n/email\n/github\n/linkedin\n/help");
       } else if (cmd == "/email") {
           swal({
