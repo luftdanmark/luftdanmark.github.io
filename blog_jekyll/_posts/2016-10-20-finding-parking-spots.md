@@ -2,7 +2,7 @@
 title: "How to Find a Parking Spot"
 layout: post
 date: 2016-10-20 22:44
-image: /assets/images/parking/lot-header.jpg
+image: /blog/assets/images/parking/lot-header.jpg
 headerImage: true
 tag:
 - machine learning
@@ -60,7 +60,7 @@ An *image classifier* is simply a classifier which takes an image as its input.
 This input is typically fed into the function as the pixel-values of the image.
 
 
-![Classification](/assets/images/parking/Classification.jpg)
+![Classification](/blog/assets/images/parking/Classification.jpg)
 <figcaption class="caption">I made this beautiful drawing to make things clearer. Expect more of these.</figcaption>
 
 All we'll have to do is train a classifier on images of empty spots and occupied ones.

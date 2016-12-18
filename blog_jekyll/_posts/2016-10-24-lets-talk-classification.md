@@ -2,7 +2,7 @@
 title: "Let's Talk Classification"
 layout: post
 date: 2016-10-24 21:43
-image: /assets/images/parking/catdog.jpg
+image: /blog/assets/images/parking/catdog.jpg
 headerImage: true
 tag:
 - machine learning
@@ -36,7 +36,7 @@ This linear function is just a big matrix multiply which takes our inputs as a
 vector (width x height x channels) and multiplies it by a set of weights to
 produce one prediction per output class.
 
-![Logistic](/assets/images/parking/Logistic.jpg)
+![Logistic](/blog/assets/images/parking/Logistic.jpg)
 <figcaption class="caption">From now on, I'll use W, X, b, and Y to denote the Weights,
 Input, Bias, and Scores respectively. </figcaption>
 
@@ -46,7 +46,7 @@ function good at performing our desired classification.
 
 ### Turning prediction scores into probabilities
 
-![Scores](/assets/images/parking/Scores.png)
+![Scores](/blog/assets/images/parking/Scores.png)
 
 Our function will output a prediction score for each of our classes. However
 these scores won't do much for us in their raw form. For every image that we
@@ -59,7 +59,7 @@ To do this, we'll employ the **SoftMax function**.
 
 The **SoftMax function** is a function which can take any kind of scores and morph them into *proper, sensible* probabilities which sum to 1. Additionally, we don't ever want the probability for a certain class to be 0 or 1. We want a nice spread. The function to achieve this looks like this.
 
-![SoftMax](/assets/images/parking/Softmax.png)
+![SoftMax](/blog/assets/images/parking/Softmax.png)
 <figcaption class="caption">I cheated with the numbers in this one when I drew it.<br>These probably aren't the real probabilities for the given scores.<br>Please forgive me.</figcaption>
 
 ### One-Hot Encoding
@@ -73,7 +73,7 @@ other classes have a probability of 0.
 
 Yet again, I have distilled this into a beautiful handmade diagram.
 
-![OneHot](/assets/images/parking/onehot.jpg)
+![OneHot](/blog/assets/images/parking/onehot.jpg)
 
 ### Cross-Entropy
 
@@ -88,7 +88,7 @@ two.
 
 <div class="side-by-side">
     <div class="toleft">
-        <img class="image" src="/assets/images/parking/crossentropy.png" alt="crossentropy">
+        <img class="image" src="/blog/assets/images/parking/crossentropy.png" alt="crossentropy">
     </div>
     <div class="toright">
         <p>
@@ -102,7 +102,7 @@ two.
 Let's quickly take a glance at what we have, because all of a sudden we have
 quite a few steps.
 
-![Recap](/assets/images/parking/recap.png)
+![Recap](/blog/assets/images/parking/recap.png)
 
 First, we take our input and turn it into scores (logits) via our linear model,
 which is just a matrix multiply plus a bias. Then we take those scores and turn
@@ -115,11 +115,11 @@ One-Hot labels.
 
 Now that we can calculate our distance from the correct classification, we want to look at how to find the weights and biases that make our classifier work the best it can. We want low distances for correct classifications and high distances for incorrect classifications.
 
-![Distances](/assets/images/parking/training.png)
+![Distances](/blog/assets/images/parking/training.png)
 
 One simple way of doing this is calculating the average distance across the entire training-set. This can be achieved by using a function like the one below.
 
-![TrainingLoss](/assets/images/parking/trainingloss.png)
+![TrainingLoss](/blog/assets/images/parking/trainingloss.png)
 
 This function takes every available input in the training-set and computes the probabilities for each of our classes. Then it takes the cross-entropy of the probabilities and the correct label for the input. It sums up all these cross-entropy outputs and divides the result by the number of inputs in the training-set, thus yielding an average cross-entropy. We call this the **Training Loss**.
 
@@ -133,12 +133,12 @@ To do this, we can use a technique called **Gradient Descent**.
 
 Because our training loss is just a function of our weights (***W***) and our Bias(***B***), we can visualize it as the following.
 
-![smallerFunc](/assets/images/parking/smallerfunction.png)
+![smallerFunc](/blog/assets/images/parking/smallerfunction.png)
 
 Following the explanation of Gradient Descent above, we can take steps towards the right weights and biases using the operation below. We simply loop over this function for both the weights and the biases, watching our training loss decrease slowly.
 
 <a id="alpha"></a>
-![GradientDescent](/assets/images/parking/gradientdescent.png)
+![GradientDescent](/blog/assets/images/parking/gradientdescent.png)
 <figcaption class="caption">Alpha is the size of our step in the direction of the negative gradient. This is called the Learning Rate. <br>I'll get back to that later, it's important.</figcaption>
 
 ### But, We Can Do Better
@@ -181,14 +181,14 @@ To do this, we keep a running average of our gradient and use this to direct us 
 
 This is called **Momentum**.
 
-![momentum](/assets/images/parking/momentum.png)
+![momentum](/blog/assets/images/parking/momentum.png)
 <figcaption class="caption">We combine the running average with the gradient of the current step to guide us in the right direction. <br> Accordingly, we have to update our descent function to utilize the momentum.</figcaption>
 
 
 Another thing we can do to help us train better is **decay our learning rate** over time. If you don't remember what I'm talking about, [it's the little alpha we used in our gradient descent formula a while back.](#alpha)
 It's been proven beneficial to take progressively smaller steps towards the minimum of the loss function over time. This also prevents us from overshooting the minimum if we ever get too close and jump right past it because of a learning rate which is too confident.
 
-![decay](/assets/images/parking/decay.png)
+![decay](/blog/assets/images/parking/decay.png)
 <figcaption class="caption">Applying an exponential decay to your learning rate is a popular option.</figcaption>
 
 ### Round-Up
