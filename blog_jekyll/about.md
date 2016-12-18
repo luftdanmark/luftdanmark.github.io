@@ -4,22 +4,17 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+## a bit about me
+{: style="text-align: center;"}
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+My name is Carl-Philip Majgaard. I come from Denmark, grew up in Poland, speak five languages, and go to school at Colby College in Maine, where I study Computer Science as an Oak Foundation Scholar.
 
-<h2>Skills</h2>
+My major interests include machine learning, networking, entrepreneurship, and writing beautiful code. Oh, and dogs! <sub> I heckin love doggos</sub>
 
+I decided to spin up this blog to chronicle whatever I'm diving head first into at the given moment. Expect to see some machine learning, fun hacks, and a few thoughts of mine every once in a while.
+
+
+<h2>some of my skills</h2>
 * Java, JavaEE
 * Python
 * Javascript, AngularJS
@@ -29,11 +24,3 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 * Tensorflow
 * PostgreSQL, JPQL
 * Git
-
-<h2>Projects</h2>
-
-<ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
-</ul>
