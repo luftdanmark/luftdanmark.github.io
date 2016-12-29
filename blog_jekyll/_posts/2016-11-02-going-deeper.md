@@ -8,7 +8,6 @@ tag:
 - machine learning
 - deep learning
 - jeeves
-- neural networks
 blog: true
 star: false
 author: cpmajgaard
