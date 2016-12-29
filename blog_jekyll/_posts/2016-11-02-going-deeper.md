@@ -2,7 +2,7 @@
 title: "Going Deeper"
 layout: post
 date: 2016-11-2 14:53
-image: /assets/images/parking/wehavetogodeeper.jpg
+image: /blog/assets/images/parking/wehavetogodeeper.jpg
 headerImage: true
 tag:
 - machine learning
@@ -25,7 +25,7 @@ Let's glance back at our model from last post and review it's complexity.
 
 Consider an example where we take 30x30 images and assign them one of 5 different classes. Using our linear model, that yields us with 4,505 parameters.
 
-![NumParams](/assets/images/parking/numparams.jpg)
+![NumParams](/blog/assets/images/parking/numparams.jpg)
 
 This is generally how this works. If you have ***n*** inputs and ***k*** outputs, you'll typically end up with ***(n+1)k*** parameters, where the ***+1*** is the weights (which are a ***1 x k*** vector).
 
@@ -33,7 +33,7 @@ This is generally how this works. If you have ***n*** inputs and ***k*** outputs
 
 Additionally, there's no hiding that the Linear Model is **Linear**. This means that the kind of interaction between inputs that you can represent is very limited.
 
-![linear](/assets/images/parking/linear.jpg)
+![linear](/blog/assets/images/parking/linear.jpg)
 <figcaption class="caption">An abridged guide to linear models</figcaption>
 
 For example, if two of your inputs are related in an additive way, you're golden. Your model can represent this well using a matrix multiply. However, if two inputs are related in a way where the output is determined by the product of these inputs, you'll have some trouble modeling this efficiently with a Linear Model.
@@ -43,12 +43,12 @@ Linear models are super-efficient running on the right equipment. Big matrix mul
 
 Additionally, linear models are numerically stable. Small changes in input will never yield massive changes in the output.
 
-![derivatives](/assets/images/parking/linearderivatives.jpg)
+![derivatives](/blog/assets/images/parking/linearderivatives.jpg)
 <figcaption class="caption">Look at this derivative. That is a nice derivative.</figcaption>
 
 In terms of derivatives, linear functions are friendly too. From any calculus class, you should know that the derivative of a linear function is constant. I'm pretty sure you can't get much more numerically stable than that.
 
-![nonlinearities](/assets/images/parking/nonlinearities.jpg)
+![nonlinearities](/blog/assets/images/parking/nonlinearities.jpg)
 <figcaption class="caption">If we want our model to be more than just a big linear operation, we'll need to insert something in between our weights.</figcaption>
 
 
@@ -59,7 +59,7 @@ So, what we'd like to do is to keep our parameters within nice big linear functi
 
 ***Behold the RELU!***
 
-![relu](/assets/images/parking/relu.jpg)
+![relu](/blog/assets/images/parking/relu.jpg)
 
 **RELU** stands for **Rectified Linear Unit** and it is most-definitely the simplest non-linear function you will ever see. It's linear if ***x>0*** and it's ***0*** everywhere else.
 
@@ -71,7 +71,7 @@ Because we (computer science students) work *smart* instead of hard, we'll take 
 
 Instead of using a single matrix multiply, we'll construct our new classifier to use two such matrix multiplies joined by one or more RELUs betwixt them.
 
-![relunet](/assets/images/parking/relunet.jpg)
+![relunet](/blog/assets/images/parking/relunet.jpg)
 
 We've just ~~killed two birds with one stone~~ *crossed two T's with one stroke of the pen*.
 
@@ -90,11 +90,11 @@ Consider this example.
 Imagine a network which is a stack of simple operations, just like we have been doing it so far. It has two linear transforms, which take parameters, and a number of other operations which take no parameters.
 Input data flows forward through this graph, changing along the way, until it becomes a set of predictions. We've seen this before.
 
-![forward](/assets/images/parking/forwardprop.jpg)
+![forward](/blog/assets/images/parking/forwardprop.jpg)
 
 To compute the derivatives of this model, you create another graph in which our data flows the opposite direction. When data flows backwards through this graph, it gets combined using the Chain Rule and produces gradients.
 
-![backwards](/assets/images/parking/backprop.jpg)
+![backwards](/blog/assets/images/parking/backprop.jpg)
 
 Just like with the Logistic Classifier, we use a loss function to determine how far off from the ideal output we are. The key difference here is that, since we have multiple layers, we need to calculate gradients for this loss function by using the derivatives of each of its component functions in conjunction with the chain rule.
 
@@ -127,7 +127,7 @@ This is where the core idea of deep learning begins to rear its mangled Picasso-
 
 Instead, we can just add more layers to make our model deeper. There are plenty of good reasons to make our model deeper. It turns out that we get much better performance with fewer parameters by going deeper instead of wider. Additionally, a lot of natural/human-made objects have a hierarchical structure which deeper models capture very naturally.
 
-![features](/assets/images/parking/features.jpg)
+![features](/blog/assets/images/parking/features.jpg)
 <figcaption class="caption">This network has learned how to identify a dog in the later layers. The first has taught itself edge detection.</figcaption>
 
 If we were to pop the hood on a deep image-classification model, we would discover that the lower layers would capture simpler things like lines and edges, while higher-up layers would capture features like geometric shapes, and in turn the highest levels would recognize whole objects like cars or dogs or faces.
