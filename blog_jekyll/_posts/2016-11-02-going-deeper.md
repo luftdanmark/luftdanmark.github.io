@@ -1,5 +1,5 @@
 ---
-title: "Going Deeper"
+title: "Diving Deeper"
 layout: post
 date: 2016-11-2 14:53
 image: /blog/assets/images/parking/wehavetogodeeper.jpg
