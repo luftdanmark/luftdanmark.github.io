@@ -155,9 +155,11 @@ from the PKLot dataset with pretty convincing success. I got somewhere in the
 **98%** range for my test set. ***That's scary good***.
 
 Now you might be thinking,
->98%? That's ridiculous. Isn't that just because of overfitting?  
+>98%? That's ridiculous. Isn't that just because of overfitting? [^2]
 >
 > -- <cite>you, probably</cite>
+
+[^2]: Overfitting is when your model starts to memorize the data you used to train it rather than learn how to generalize. This results in models which work well during training, but fail when faced with data they haven't seen before.
 
 Good question. When you ran `retrain.py`, unless you explicitly specified
 otherwise, it automatically set aside 10% of the images for a validation set and

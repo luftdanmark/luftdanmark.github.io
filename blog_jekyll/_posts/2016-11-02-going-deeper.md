@@ -7,7 +7,6 @@ headerImage: true
 tag:
 - machine learning
 - deep learning
-- jeeves
 blog: true
 star: false
 author: cpmajgaard

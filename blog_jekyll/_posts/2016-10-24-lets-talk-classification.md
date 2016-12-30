@@ -6,7 +6,6 @@ image: /blog/assets/images/parking/catdog.jpg
 headerImage: true
 tag:
 - machine learning
-- jeeves
 - neural networks
 blog: true
 star: false
@@ -164,7 +163,7 @@ silly idea, but it works in practice.
 
 What is very important is that each sliver of training data that we use is
 ***randomly selected***. I can't stress enough how important this is. If the
-sample isn't random enough, this won't work at all.
+sample isn't random enough, this won't work at all. The reason for this is that we would very like to have each little batch to sample as wide a range of our input space as possible. Diverse batches of inputs allow for easier discovery of the *true* commonalities of these inputs.
 
 At each step, although it is much less accurate, our derivative is much cheaper
 to compute. To compensate for our inaccurate training loss estimate and derivative, we'll have
