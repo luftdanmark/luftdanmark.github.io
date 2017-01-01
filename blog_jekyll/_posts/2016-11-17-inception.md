@@ -2,7 +2,7 @@
 title: "Inception"
 layout: post
 date: 2016-11-17 14:53
-image: /assets/images/parking/spinner.jpg
+image: /blog/assets/images/parking/spinner.jpg
 headerImage: true
 tag:
 - machine learning
@@ -24,7 +24,7 @@ Generally, you're faced with a choice at each layer in a convolutional neural ne
 
 Here's the structure of an Inception module.
 
-![inception](/assets/images/parking/inception.jpg)
+![inception](/blog/assets/images/parking/inception.jpg)
 
 Instead of just a single convolution, you have a combination of operations which are concatenated at the end. Each operation is beneficial in its own way, and the integrity of each of their results is preserved due to the concatenation rather than some other joining operation.
 
@@ -32,17 +32,17 @@ Instead of just a single convolution, you have a combination of operations which
 So now we've seen the Inception module on it's own. Pretty nifty little thing. Makes you wonder how many of them Google decided to put in their Inception v3 classifier. One? Three?
 
 #### Try ELEVEN...
-![incepgraph](/assets/images/parking/graph.png){: class="bigger-image" }
+![incepgraph](/blog/assets/images/parking/graph.png){: class="bigger-image" }
 
 This thing is huge. So huge that I had to lay the image on its side so it wouldn't throw off the formatting of this page. That region that I boxed in red contains a whopping 11 inception modules.
 
 <div class="side-by-side">
     <div class="toleft">
-    <img class="image" src="/assets/images/parking/lay1.png" alt="lay1">
+    <img class="image" src="/blog/assets/images/parking/lay1.png" alt="lay1">
     <figcaption class="caption">The Inception module structure provides a great foundation for exploration. Google's engineers clearly saw a need to tinker with the convolutions for even better performance.</figcaption>
     </div>
     <div class="toright">
-        <img class="image" src="/assets/images/parking/lay8.png" alt="lay1">
+        <img class="image" src="/blog/assets/images/parking/lay8.png" alt="lay1">
     </div>
 </div>
 
@@ -88,7 +88,7 @@ V = tf.reshape(V, (1, cy * 35, cx * 35, 1))
     </p>
   </div>
     <div class="toright">
-    <img class="image" src="/assets/images/parking/max1x1.jpg" alt="max1x1">
+    <img class="image" src="/blog/assets/images/parking/max1x1.jpg" alt="max1x1">
     </div>
 </div>
 
@@ -100,7 +100,7 @@ V = tf.reshape(V, (1, cy * 35, cx * 35, 1))
     </p>
   </div>
     <div class="toright">
-    <img class="image" src="/assets/images/parking/3x3.png" alt="3x3">
+    <img class="image" src="/blog/assets/images/parking/3x3.png" alt="3x3">
     </div>
 </div>
 
@@ -111,7 +111,7 @@ This last one is a little more challenging to look at. This is taken from after 
     </p>
   </div>
     <div class="toright">
-    <img class="image" src="/assets/images/parking/lay8conv.png" alt="lay8conv">
+    <img class="image" src="/blog/assets/images/parking/lay8conv.png" alt="lay8conv">
     </div>
 </div>
 
